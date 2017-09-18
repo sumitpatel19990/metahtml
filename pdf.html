@@ -1,0 +1,180 @@
+<?php
+
+/*
+ * Template Name: Focus Gravity
+ * Version: 1.2
+ * Description: Focus Gravity providing a classic layout which epitomises Gravity Forms Print Preview. It's the familiar layout you've come to love. Through the Template tab you can control the PDF header and footer, change the background color or image, and show or hide the form title, page names, HTML fields and the Section Break descriptions.
+ * Author: Gravity PDF
+ * Author URI: https://gravitypdf.com
+ * Group: Core
+ * License: GPLv2
+ * Required PDF Version: 4.0-alpha
+ * Tags: Header, Footer, Background, Optional HTML Fields, Optional Page Fields, Combined Row, Alternate Colors
+ */
+
+/* Prevent direct access to the template */
+if ( ! class_exists('GFForms')) {
+    return;
+}
+
+/*
+ * All Gravity PDF 4.x templates have access to the following variables:
+ *
+ * $form (The current Gravity Form array)
+ * $entry (The raw entry data)
+ * $form_data (The processed entry data stored in an array)
+ * $settings (the current PDF configuration)
+ * $fields (an array of Gravity Form fields which can be accessed with their ID number)
+ * $config (The initialised template config class – eg. /config/focus-gravity.php)
+ * $gfpdf (the main Gravity PDF object containing all our helper classes)
+ * $args (contains an array of all variables - the ones being described right now - passed to the template)
+ */
+
+/*
+ * Load up our template-specific appearance settings
+ */
+// $misc = GPDFAPI::get_misc_class();
+
+// $accent_colour             = ( ! empty( $settings['focusgravity_accent_colour'] ) ) ? $settings['focusgravity_accent_colour'] : '#e3e3e3';
+// $accent_contrast_colour    = $misc->get_contrast( $accent_colour );
+// $secondary_colour          = ( ! empty( $settings['focusgravity_secondary_colour'] ) ) ? $settings['focusgravity_secondary_colour'] : '#eaf2fa';
+// $secondary_contrast_colour = $misc->get_contrast( $secondary_colour );
+
+// $label_format = ( ! empty( $settings['focusgravity_label_format'] ) ) ? $settings['focusgravity_label_format'] : 'combined_label';
+
+?>
+
+<!-- Include styles needed for the PDF -->
+<body style="color:#000000; font-size: 20px;">
+<div style="width: 95%;">
+<img class="alignleft wp-image-8692 size-medium" src="http://happy.luminoor.uk/wp-content/plugins/gravity-forms-pdf-extended/src/templates/images/logo-email.png" alt=""/>
+<img class="alignright wp-image-8693 size-medium" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/logo-300x38.png" style="padding-top:20px; float:right; margin-right:10px;" alt="" width="300" height="38" />
+</div>
+<div class="Application" style="background-color:#f3f3f3 !important; height: 520px; padding-bottom: 20px; border: 1px solid #000; width: 90%; border-radius: 100px; margin-top: 10px; padding-left: 20px; padding-right: 20px; font-size: 20px;">
+<p style="text-align: center; font-size: 20px; color:#000;"><b>Application Overview</b></p>
+<div style="width:100%; float:left;">
+<div class="floatleft" style="float: left; width: 47%;">
+<p style="color:#000;"><b>Application's Name:</b>{Firstname:9}</p>
+<p style="color:#000;"><b>Occupying property with:</b>{Surname:10}</p>
+</div>
+<div class="floatright" style="float: right; width: 50%;">
+<p style="text-align: right;"><b>Property viewed on:</b>{Viewing Date ::56}</p>
+
+</div>
+</div>
+<table class="main-table" style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8694" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-7.png" alt="" width="50" height="50" /></th><th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8695" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-6.png" alt="" width="50" height="50" /></th><th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8696" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-5.png" alt="" width="50" height="50" /></th><th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8697" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-4.png" alt="" width="50" height="50" /></th><th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8698" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-3.png" alt="" width="50" height="50" /></th><th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8699" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-2.png" alt="" width="50" height="50" /></th><th width="10%" style="border:1px solid #000;"><img class="alignnone size-full wp-image-8700" src="http://happylets.luminoor.uk/wp-content/uploads/2017/05/icon-1.png" alt="" width="50" height="50" /></th>
+</tr><tr>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>Smoker</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>Pets</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>Status</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>CCJs/Decrees</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>Rented Before</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>Affordability</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>Guarantor</b></td>
+</tr><tr>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>{Do you smoke?:17}</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>{Will you be keeping pets in the property?:16}</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>{Status:19}</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>{Do you have any CCJ’s/Decrees?:31}</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>{Have you rented before?:15}</b></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"></td>
+<td width="10%" style="color:#000; border:1px solid #000; text-align:center; font-weight: normal;"><b>{Do you require a guarantor?:60}</b></td>
+</tr>
+</tbody>
+</table>
+<table class="main-table" style="color:#000;  border-collapse: collapse; width: 100%; margin-top:10px;">
+<tbody>
+<tr><th width="100%" style="border:1px solid #000;"><b style="float:left; padding-left:10px; padding-top:5px; padding-bottom:5px;">Applicant Requests:</b></th></tr>
+<tr><td width="100%" style="border:1px solid #000; height:50px;  float:left; padding-left:10px; padding-top:5px; padding-bottom:5px; float: none;">{Properties are generally taken as seen and as per the details provided in the advert. If you have any queries/requests with regards to furnishings etc... detail here::44}</td></tr>
+</tbody>
+</table>
+<table class="main-table" style="color:#000; border-collapse: collapse; width: 100%; margin-top:10px;">
+<tbody>
+<tr><th width="100%" style="color:#000; border:1px solid #000;"><b style="float:left; padding-left:10px; padding-top:5px; padding-bottom:5px;">Other tenant comments:</b></th></tr>
+<tr><td width="100%" style="color:#000; border:1px solid #000; height:50px; float:left; padding-left:10px; padding-top:5px; padding-bottom:5px; float: none;">{ (I agree to all the above statements):54.1}</td></tr>
+</tbody>
+</table>
+</div>
+<div class="Tenancy">
+<div class="table-title" style="margin-left: 15px; margin-bottom:20px; margin-top:20px; height:34px; width:91%;">
+<img src="http://happy.luminoor.uk/wp-content/plugins/gravity-forms-pdf-extended/src/templates/images/img-1.png" style="width:100%;">
+</div>
+<table class="main-table" style="border-collapse: collapse; font-size: 20px; margin-left:16px; width: 91%;">
+<tbody>
+<tr>
+<th style="border:1px solid #000; height:100px; text-align:center; width: 20%;"><b>Property Address</b></th>
+<th colspan="3" style="border:1px solid #000; height:100px; text-align:center; width: 80%;"><b>{Property Address in full inc Post code:34}</b></th>
+</tr>
+<tr>
+<td style="border:1px solid #000; height:50px; text-align:center; width: 20%;"></td>
+<td style="border:1px solid #000; height:50px; text-align:center; width: 40%;"><b>Landlord invites offers as per the
+below</b></td>
+<td style="border:1px solid #000; height:50px; text-align:center; width: 40%;"><b>Applicant’s offer of tenancy</b></td>
+</tr>
+<tr>
+<td style="border:1px solid #000; text-align:center; width: 20%;"><b>Tenancy Term</b></td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">Tenancy Term</td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">Tenancy Term</td>
+</tr>
+<tr>
+<td style="border:1px solid #000; text-align:center; width: 20%;"><b>Entry Date</b></td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Desired Entry Date:36}</td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Proposed Entry Date:40}</td>
+</tr>
+<tr>
+<td style="border:1px solid #000; text-align:center; width: 20%;"><b>Rent (pcm)</b></td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Desired Rent (pcm) £:37}</td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Proposed monthly rental:42}</td>
+</tr>
+<tr>
+<td style="border:1px solid #000; text-align:center; width: 20%;"><b>Deposit</b></td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Deposit £:38}</td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Deposit £:38}</td>
+</tr>
+<tr>
+<td style="border:1px solid #000; text-align:center; width: 20%;"><b>Payment Terms</b></td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">Monthly in advance subject to
+credit/checks and referencing.</td>
+<td style="border:1px solid #000; text-align:center; width: 35%;">{Proposed tenancy term:41}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-title" style="margin-left: 15px; margin-bottom:20px; margin-top:20px; height:34px; width:91%;">
+<img src="http://happy.luminoor.uk/wp-content/plugins/gravity-forms-pdf-extended/src/templates/images/img-2.png" style="width:100%;">
+</div>
+<table class="main-table" style="color:#000;  border-collapse: collapse; width: 100%; margin-top:20px; margin-left: 14px;">
+<tbody>
+<tr><td style="width:50% padding-bottom: 12px;"><b>Name:</b>{Firstname:9}</td><td style="width:50% padding-bottom: 12px;"><b>Date of Birth:</b>{Date of Birth:13}</td></tr>
+<tr><td style="width:50% padding-bottom: 12px;"><b>UK resident for at least 6 months:</b>{UK resident for at least 6 months::14}</td><td style="width:50% padding-bottom: 12px;"><b>Status:</b>{Status:19}</td></tr>
+</tbody>
+</table>
+<div class="table-title" style="margin-left: 15px; margin-bottom:20px; margin-top:20px; height:34px; width:91%;">
+<img src="http://happy.luminoor.uk/wp-content/plugins/gravity-forms-pdf-extended/src/templates/images/img-3.png" style="width:100%;">
+</div>
+<table class="main-table" style="color:#000;  border-collapse: collapse; width: 100%; margin-top:20px; margin-left: 14px;">
+<tbody>
+<tr><td style="width:50% padding-bottom: 12px;"><b>Name of Employer:</b>{Name of Employer:29}</td><td style="width:50% padding-bottom: 12px;"><b>Job Title:</b>{Job Title:27}</td></tr>
+<tr><td style="width:50% padding-bottom: 12px;"><b>Employment Start Date:</b>{Employment Start Date:28}</td><td style="width:50% padding-bottom: 12px;"><b>Salary per annum:</b>{Salary per annum:26}</td></tr>
+<tr><td style="width:50% padding-bottom: 12px;"><b>Contract type:</b>{Contract type:30}</td><td style="width:50%"></td></tr>
+</tbody>
+</table>
+<table class="main-table" style="color:#000;  border-collapse: collapse; width: 100%; margin-top:20px; margin-left: 14px;">
+<tbody>
+<tr><td style="width:50% padding-bottom: 12px;">Do you have any CCJ’s/Decrees?{Do you have any CCJ’s/Decrees?:31}</td></td></tr>
+<tr><td style="width:50% padding-bottom: 12px;">Have you ever been declared bankrupt?{Have you ever been declared bankrupt?:33}</td><td style="width:50%"></td></tr>
+</tbody>
+</table>
+<div class="table-title" style="margin-left: 15px; margin-bottom:20px; margin-top:20px; height:34px; width:91%;">
+<img src="http://happy.luminoor.uk/wp-content/plugins/gravity-forms-pdf-extended/src/templates/images/img-4.png" style="width:100%;">
+</div>
+<table class="main-table" style="color:#000;  border-collapse: collapse; width: 100%; margin-top:20px; margin-left: 14px;">
+<tbody>
+<tr><td style="width:50% padding-bottom: 12px;"><b>Course name:</b>{Course name:21}</td><td style="width:50% padding-bottom: 12px;"><b>University:</b>{University:22}</td></tr>
+<tr><td style="width:50% padding-bottom: 12px;"><b>Year of study you are entering into:</b>{Year of study you are entering into:23}</td><td style="width:50% padding-bottom: 12px;"><b>Years of course remaining:</b></td></tr>
+</tbody>
+</table>
+</body>

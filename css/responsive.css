@@ -1,0 +1,32 @@
+@media screen and (width: 768px) {
+    .mobilemenu {
+        display: none
+    }
+}
+@media screen and (max-width: 768px) {
+    .Mobile-header {
+        position: absolute !important;
+    }
+}
+@media screen and (max-width: 1199px) {
+	.container {
+		width: 100%!important;
+	}
+ }
+
+ @media screen and (min-width: 1201px) and (max-width: 1300px) {
+	.trainer p:nth-child(2) {
+	    color: #404040;
+	    font-family: "AvenirLTStd-Roman";
+	    font-size: 15px;
+	    margin-bottom: 15px;
+	}
+	.trainer p {
+	    font-family: "AvenirLTStd-Light";
+	    font-size: 13px;
+	    margin-bottom: 15px;
+	}
+	.view-our-trainers {
+    	margin-top: 8px;
+	}
+ }
