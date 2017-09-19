@@ -32,6 +32,24 @@
         </div>
     </div>
 </section>
+<section class="first-trainers">
+    <div class="container">
+        <h2>Agile Courses</h2>
+        <div class="bussine-p-text">
+            <p>Our agile project management courses are delivered by experienced trainers with over 15 years of experience.</p>
+            <p>With a 99% pass rate on exams you can be assured you will achieve a qualification that will give you the confidence to start working in an agile environment immediately after the course.</p>
+            <p>By attending our agile courses you benefit from:</p>
+            <ul>
+                <li>considerable support from our experienced lecturers</li>
+                <li>great learning environment in our own central London training venue</li>
+                <li>high pass-rate on exams</li>
+                <li>affordable prices</li>
+                <li>great service</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section class="first-resources dark-bg">
     <div class="container">
         <div class="resources-right">
